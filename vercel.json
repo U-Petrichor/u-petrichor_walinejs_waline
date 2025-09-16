@@ -19,6 +19,10 @@
   ],
   "rewrites": [
     {
+      "source": "/ui(.*)",
+      "destination": "dashboard.js"
+    },
+    {
       "source": "/((?!robots\\.txt$).*)",
       "destination": "index.cjs"
     }
