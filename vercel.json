@@ -5,10 +5,6 @@
   },
   "builds": [
     {
-      "src": "dashboard.js",
-      "use": "@vercel/node"
-    },
-    {
       "src": "robots.txt",
       "use": "@vercel/static"
     },
@@ -18,10 +14,6 @@
     }
   ],
   "rewrites": [
-    {
-      "source": "/ui(.*)",
-      "destination": "dashboard.js"
-    },
     {
       "source": "/((?!robots\\.txt$).*)",
       "destination": "index.cjs"
