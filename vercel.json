@@ -3,7 +3,11 @@
   "github": {
     "silent": true
   },
-  "builds": [
+  "builds": 
+    {
+      "src": "dashboard.js",
+      "use": "@vercel/node"
+    },
     {
       "src": "robots.txt",
       "use": "@vercel/static"
