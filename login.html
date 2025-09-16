@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waline Login UI</title>
-    <!-- Waline 的 CSS 和 JS，假设从 CDN 加载；如果你有本地版本，可以替换 -->
     <link rel="stylesheet" href="https://unpkg.com/@waline/client/dist/waline.css">
-    <script src="https://unpkg.com/@waline/client/dist/waline.js"></script>
-    <!-- 自定义脚本：注入 ALLOW_SOCIALS，只允许 GitHub -->
+    <!-- 先设置全局变量 -->
     <script>
-        window.ALLOW_SOCIALS = ['github'];  // 只显示 GitHub 按钮，其他隐藏
+        window.ALLOW_SOCIALS = ['github'];  // 只显示 GitHub 按钮
     </script>
+    <!-- 然后加载 Waline JS -->
+    <script src="https://unpkg.com/@waline/client/dist/waline.js"></script>
 </head>
 <body>
-    <div id="waline-admin"></div>  <!-- Waline admin UI 挂载点 -->
+    <div id="waline-admin"></div>
     <script>
-        // 初始化 Waline admin UI
         Waline.init({
             el: '#waline-admin',
-            serverURL: window.location.origin,  // 使用当前 serverURL
-            // 其他选项根据需要添加，如 lang: 'en'
+            serverURL: window.location.origin,
+            lang: 'zh-CN'  // 如果想匹配 URL 参数，改成 zh-CN；或 'en' 固定英文
         });
     </script>
 </body>
