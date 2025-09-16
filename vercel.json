@@ -33,8 +33,5 @@
       "destination": "/api/oauth?type=$1",
       "statusCode": 301
     }
-  ],
-   "engines": {
-    "node": "18.x"
-  }
+  ]
 }
