@@ -1,40 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Waline Auth</title>
-  <style>
-    /* 简单的居中样式 */
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      background-color: #f0f2f5;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waline Login UI</title>
+    <!-- Waline 的 CSS 和 JS，假设从 CDN 加载；如果你有本地版本，可以替换 -->
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client/dist/waline.css">
+    <script src="https://unpkg.com/@waline/client/dist/waline.js"></script>
+    <!-- 自定义脚本：注入 ALLOW_SOCIALS，只允许 GitHub -->
+    <script>
+        window.ALLOW_SOCIALS = ['github'];  // 只显示 GitHub 按钮，其他隐藏
+    </script>
 </head>
 <body>
-  <div id="waline-auth"></div>
-
-  <script>
-    // 这是实现自定义登录方式的关键！
-    // 在 Waline Auth 脚本加载前定义好你允许的社交登录方式
-    // 这里我们去掉了 Facebook 和 Twitter
-    window.ALLOW_SOCIALS = ['GitHub',  'QQ', 'Google'];
-  </script>
-
-  <script type="module">
-    // 引入 Waline 官方的 Auth 组件
-    import { init } from 'https://unpkg.com/@waline/auth@v2/dist/auth.mjs';
-
-    // 初始化 Auth 组件
-    init({
-      el: '#waline-auth',
-      // serverURL 会自动从当前域名获取，所以通常不需要填写
-    });
-  </script>
+    <div id="waline-admin"></div>  <!-- Waline admin UI 挂载点 -->
+    <script>
+        // 初始化 Waline admin UI
+        Waline.init({
+            el: '#waline-admin',
+            serverURL: window.location.origin,  // 使用当前 serverURL
+            // 其他选项根据需要添加，如 lang: 'en'
+        });
+    </script>
 </body>
 </html>
