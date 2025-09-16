@@ -23,4 +23,11 @@
       "destination": "index.cjs"
     }
   ]
+  "redirects": [
+    {
+      "source": "/api/oauth/(.*)",
+      "destination": "/api/oauth?type=$1",
+      "statusCode": 301
+    }
+  ]
 }
