@@ -26,7 +26,7 @@
       "source": "/((?!robots\\.txt$).*)",
       "destination": "index.cjs"
     }
-  ]
+  ],
   "redirects": [
     {
       "source": "/api/oauth/(.*)",
