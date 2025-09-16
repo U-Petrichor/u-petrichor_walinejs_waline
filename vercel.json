@@ -20,6 +20,6 @@
     }
   ],
   "routes": [
-    { "src": "/ui", "dest": "/public/login.html" }, 
+    { "src": "/ui", "dest": "/public/login.html" }
   ]
 }
