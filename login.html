@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waline Auth</title>
+  <style>
+    /* 简单的居中样式 */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f0f2f5;
+    }
+  </style>
+</head>
+<body>
+  <div id="waline-auth"></div>
+
+  <script>
+    // 这是实现自定义登录方式的关键！
+    // 在 Waline Auth 脚本加载前定义好你允许的社交登录方式
+    // 这里我们去掉了 Facebook 和 Twitter
+    window.ALLOW_SOCIALS = ['GitHub',  'QQ', 'Google'];
+  </script>
+
+  <script type="module">
+    // 引入 Waline 官方的 Auth 组件
+    import { init } from 'https://unpkg.com/@waline/auth@v2/dist/auth.mjs';
+
+    // 初始化 Auth 组件
+    init({
+      el: '#waline-auth',
+      // serverURL 会自动从当前域名获取，所以通常不需要填写
+    });
+  </script>
+</body>
+</html>
