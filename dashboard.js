@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
       window.recaptchaV3Key = ${JSON.stringify(process.env.RECAPTCHA_V3_KEY)};
       window.turnstileKey = ${JSON.stringify(process.env.TURNSTILE_KEY)};
       window.serverURL = 'https://${req.headers.host}/api/';
-      window.ALLOW_SOCIALS = ${process.env.ALLOW_SOCIALS ? JSON.stringify(process.env.ALLOW_SOCIALS.split(/\s*,\s*/)) : null};
+      window.ALLOW_SOCIALS = ['qq', 'weibo', 'github', 'google']; 
       </script>
       <script src="${
         process.env.WALINE_ADMIN_MODULE_ASSET_URL || '//unpkg.com/@waline/admin'
