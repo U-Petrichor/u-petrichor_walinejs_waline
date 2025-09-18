@@ -15,12 +15,12 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!robots\\.txt$).*)",
-      "destination": "index.cjs"
-    },
-      {
       "source": "/ui(.*)",
       "destination": "/dashboard.js"
+    },
+    {
+      "source": "/((?!robots\\.txt$).*)",
+      "destination": "index.cjs"
     }
   ]
 }
