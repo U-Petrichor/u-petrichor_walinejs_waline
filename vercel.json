@@ -19,7 +19,7 @@
       "destination": "index.cjs"
     },
       {
-      "source": "/admin",
+      "source": "/ui(.*)",
       "destination": "/dashboard.js"
     }
   ]
