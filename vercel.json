@@ -3,15 +3,15 @@
   "github": {
     "silent": true
   },
+  "functions": {
+    "dashboard.js": {
+      "runtime": "@vercel/node@1"
+    },
+    "index.cjs": {
+      "runtime": "@vercel/node@1"
+    }
+  },
   "builds": [
-    {
-      "src": "dashboard.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "index.cjs",
-      "use": "@vercel/node"
-    },
     {
       "src": "robots.txt",
       "use": "@vercel/static"
