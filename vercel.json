@@ -5,12 +5,16 @@
   },
   "builds": [
     {
-      "src": "robots.txt",
-      "use": "@vercel/static"
+      "src": "dashboard.js",
+      "use": "@vercel/node"
     },
     {
       "src": "index.cjs",
       "use": "@vercel/node"
+    },
+    {
+      "src": "robots.txt",
+      "use": "@vercel/static"
     }
   ],
   "rewrites": [
