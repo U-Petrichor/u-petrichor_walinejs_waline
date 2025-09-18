@@ -5,8 +5,12 @@
   },
   "builds": [
     {
-      "dashboard.js": {
-      "runtime": "@vercel/node@1"
+      "src": "dashboard.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "index.cjs",
+      "use": "@vercel/node"
     },
     {
       "src": "robots.txt",
