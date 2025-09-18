@@ -16,7 +16,7 @@ module.exports = function () {
     window.turnstileKey = ${JSON.stringify(process.env.TURNSTILE_KEY)};
     window.serverURL = '${ctx.serverURL}/api/';
     // 👇 这里加上 ALLOW_SOCIALS，只保留 github
-    window.ALLOW_SOCIALS = ["github"];
+    window.ALLOW_SOCIALS = ['github'];
     </script>
     <script src="${
       process.env.WALINE_ADMIN_MODULE_ASSET_URL || '//unpkg.com/@waline/admin'
