@@ -6,11 +6,11 @@
   "builds": [
     {
       "src": "dashboard.js",
-      "use": "@vercel/node@2.5.10"
+      "use": "@vercel/node"
     },
     {
       "src": "index.js",
-      "use": "@vercel/node@2.5.10"
+      "use": "@vercel/node"
     }
   ],
   "rewrites": [
